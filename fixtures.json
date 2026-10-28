@@ -1,0 +1,17 @@
+{
+ "documents": [
+  {"id":"returns","tenant":"northstar","role":"support","current":true,"source":"policies/returns.md","body":"Northstar returns policy: unopened products can be returned within 30 days with a receipt."},
+  {"id":"returns-old","tenant":"northstar","role":"support","current":false,"source":"archive/returns.md","body":"Northstar returns policy: products can be returned within 90 days."},
+  {"id":"shipping","tenant":"northstar","role":"support","current":true,"source":"policies/shipping.md","body":"Northstar shipping delivery takes 3 to 5 business days. Escalate delayed orders to logistics."},
+  {"id":"internal","tenant":"northstar","role":"finance","current":true,"source":"finance/margins.md","body":"Northstar confidential margin target is 42 percent. Returns reserve is confidential."},
+  {"id":"returns","tenant":"rival","role":"support","current":true,"source":"policies/returns.md","body":"Rival returns policy: all products can be returned within 365 days without a receipt."}
+ ],
+ "queries": [
+  {"query":"returns policy","tenant":"northstar","role":"support","expected":"northstar:returns:0"},
+  {"query":"shipping delivery","tenant":"northstar","role":"support","expected":"northstar:shipping:0"},
+  {"query":"returns policy","tenant":"rival","role":"support","expected":"rival:returns:0"},
+  {"query":"margin target","tenant":"northstar","role":"support","expected":null},
+  {"query":"shipping delivery","tenant":"missing","role":"support","expected":null},
+  {"query":"quantum astrophysics","tenant":"northstar","role":"support","expected":null}
+ ]
+}

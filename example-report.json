@@ -1,0 +1,85 @@
+{
+  "mode": "offline-extractive",
+  "cases": [
+    {
+      "query": "returns policy",
+      "tenant": "northstar",
+      "role": "support",
+      "expected": "northstar:returns:0",
+      "answer": "Northstar returns policy: unopened products can be returned within 30 days with a receipt.",
+      "abstained": false,
+      "citations": [
+        "northstar:returns:0"
+      ],
+      "retrieval_ms": 0.062,
+      "embedding": "sha256-hashed-bag-of-words",
+      "passed": true
+    },
+    {
+      "query": "shipping delivery",
+      "tenant": "northstar",
+      "role": "support",
+      "expected": "northstar:shipping:0",
+      "answer": "Northstar shipping delivery takes 3 to 5 business days. Escalate delayed orders to logistics.",
+      "abstained": false,
+      "citations": [
+        "northstar:shipping:0"
+      ],
+      "retrieval_ms": 0.046,
+      "embedding": "sha256-hashed-bag-of-words",
+      "passed": true
+    },
+    {
+      "query": "returns policy",
+      "tenant": "rival",
+      "role": "support",
+      "expected": "rival:returns:0",
+      "answer": "Rival returns policy: all products can be returned within 365 days without a receipt.",
+      "abstained": false,
+      "citations": [
+        "rival:returns:0"
+      ],
+      "retrieval_ms": 0.042,
+      "embedding": "sha256-hashed-bag-of-words",
+      "passed": true
+    },
+    {
+      "query": "margin target",
+      "tenant": "northstar",
+      "role": "support",
+      "expected": null,
+      "answer": "Insufficient authorized evidence.",
+      "abstained": true,
+      "citations": [],
+      "retrieval_ms": 0.023,
+      "embedding": "sha256-hashed-bag-of-words",
+      "passed": true
+    },
+    {
+      "query": "shipping delivery",
+      "tenant": "missing",
+      "role": "support",
+      "expected": null,
+      "answer": "Insufficient authorized evidence.",
+      "abstained": true,
+      "citations": [],
+      "retrieval_ms": 0.018,
+      "embedding": "sha256-hashed-bag-of-words",
+      "passed": true
+    },
+    {
+      "query": "quantum astrophysics",
+      "tenant": "northstar",
+      "role": "support",
+      "expected": null,
+      "answer": "Insufficient authorized evidence.",
+      "abstained": true,
+      "citations": [],
+      "retrieval_ms": 0.023,
+      "embedding": "sha256-hashed-bag-of-words",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "total": 6
+}
